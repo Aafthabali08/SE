@@ -1,0 +1,24 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class WeatherModelStage3 {
+    public static void main(String[] args) {
+        try {
+            File file = new File("input.txt");
+            Scanner scanner = new Scanner(file);
+
+            double a = scanner.nextDouble();
+            double b = scanner.nextDouble();
+            double c = scanner.nextDouble();
+            double x = scanner.nextDouble();
+
+            double y = a * x * x + b * x + c;
+
+            System.out.println("Predicted value (Stage 3): " + y);
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
+        }
+    }
+}
