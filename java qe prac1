@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+public class Main
+{  
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the coefficent of 'a':");
+		double a =sc.nextDouble();
+		System.out.println("Enter the coefficient of 'b':");
+		double b =sc.nextDouble();
+		System.out.println("Enter the coefficient of 'c':");
+		double c =sc.nextDouble();
+		
+		double discriminant = b*b-4*a*c;
+		if(discriminant>0){
+		    double root1=(-b + Math.sqrt(discriminant))/(2*a);
+		    double root2=(-b - Math.sqrt(discriminant))/(2*a);
+		    System.out.println("Roots are real and distinct");
+		    System.out.println("root1 ="+root1);
+		    System.out.println("root2 ="+root2);
+		    
+		}
+		else if(discriminant == 0){
+		    double root = -b / 2*a;
+		    System.out.println("real and equal");
+		    System.out.println("root ="+root);
+		}
+		else{
+		    double realpart = -b/2*a;
+		    double imaginarypart = Math.sqrt(-discriminant)/(2*a);
+		    System.out.println("roots area complex and distinct");
+		    System.out.println("root1 ="+realpart+"+"+imaginarypart+"i");
+		    System.out.println("root2 ="+realpart+"-"+imaginarypart+"i");
+		}
+	}
+
+}
