@@ -1,0 +1,12 @@
+public class WeatherModelStage1 {
+    public static void main(String[] args) {
+        double a = 0.01;
+        double b = -0.2;
+        double c = 25.0;
+        double x = 5.0;
+
+        double y = a * x * x + b * x + c;
+
+        System.out.println("Predicted value (Stage 1): " + y);
+    }
+}
